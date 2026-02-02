@@ -1,0 +1,25 @@
+{
+    "_comment": "Add your app paths here. Use full paths for apps not in PATH.",
+    "chrome": "start chrome",
+    "notepad": "notepad",
+    "calculator": "calc",
+    "spotify": "start spotify:",
+    "vscode": "code",
+    "discord": "start https://discord.com/channels/@me",
+    "explorer": "explorer",
+    "terminal": "wt",
+    "youtube": "start https://youtube.com",
+    "yt": "start https://youtube.com",
+    "google": "start https://google.com",
+    "github": "start https://github.com",
+    "chatgpt": "start https://chat.openai.com",
+    "cmd": "start cmd",
+    "files": "explorer",
+    "whatsapp": "start whatsapp:",
+    "_examples": {
+        "chrome_full_path": "start \"\" \"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\"",
+        "notepad_plus": "start \"\" \"C:\\Windows\\notepad.exe\"",
+        "vlc": "start \"\" \"C:\\Program Files\\VideoLAN\\VLC\\vlc.exe\"",
+        "whatsapp": "start \"\" \"C:\\Program Files\\WindowsApps\\5319275A.WhatsAppDesktop_2.2587.9.0_x64__cv1g1gvanyjgm\\WhatsApp.Root.exe\""
+    }
+}
