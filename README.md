@@ -62,18 +62,13 @@ Press and hold **SPACE** to speak without wake word.
 ```
 app/
 ├── main.py          # Entry point & main loop
-├── config.py        # Configuration management
-├── core/
-│   ├── audio.py     # Microphone & wake word
-│   └── brain.py     # LLM interface
-├── services/
-│   ├── stt.py       # Speech-to-Text
-│   └── tts.py       # Text-to-Speech
-├── tools/
-│   ├── registry.py  # Tool decorator & manager
-│   └── basic.py     # Built-in tools
-└── utils/
-    └── logger.py    # Logging setup
+└── commands/
+    ├── apps.py      # App launcher & shortcuts
+    ├── approval.py  # Dangerous command approvals
+    ├── automation.py
+    ├── files.py
+    ├── monitoring.py
+    └── system.py
 ```
 
 ## Available Tools

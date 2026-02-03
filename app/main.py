@@ -16,6 +16,7 @@ import json
 import time
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import quote_plus
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -115,7 +116,7 @@ CRITICAL RULES:
 2. NO FILLER. Do not say "I am now...", "Initiating...", "Tasked with...".
 3. BE ROBOTIC AND PRECISE.
 4. For typing: wrap text in triple quotes: "Typing '''text'''"
-5. NEVER ask for confirmation - just execute
+5. Ask for confirmation only for dangerous actions.
 
 RESPONSE FORMAT:
 - Open app: "Opening [App]"
@@ -329,7 +330,7 @@ def execute_commands(text: str):
             if match:
                 query = match.group(1).strip()
                 if query and len(query) > 2:
-                    url = f"https://www.youtube.com/results?search_query={query.replace(' ', '+')}"
+                    url = f"https://www.youtube.com/results?search_query={quote_plus(query)}"
                     webbrowser.open(url)
                     log("Action", f"YouTube search: {query}")
                     return True
@@ -345,7 +346,7 @@ def execute_commands(text: str):
             if match:
                 query = match.group(1).strip()
                 if query and len(query) > 2:
-                    url = f"https://www.google.com/search?q={query.replace(' ', '+')}"
+                    url = f"https://www.google.com/search?q={quote_plus(query)}"
                     webbrowser.open(url)
                     log("Action", f"Google search: {query}")
                     return True
