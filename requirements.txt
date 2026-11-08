@@ -3,25 +3,24 @@ python-dotenv>=1.0.0
 pydantic>=2.0.0
 pydantic-settings>=2.0.0
 httpx>=0.27.0
+requests>=2.31.0
 
-# Audio Capture (switched to sounddevice)
+# Audio Capture (sounddevice & PyAudio)
 numpy>=1.24.0
 sounddevice>=0.4.6
-scipy>=1.10.0  # For saving WAV files
+scipy>=1.10.0
 pyaudio>=0.2.13
 
-# STT (Deepgram - Python 3.14 safe)
-deepgram-sdk>=3.0.0
+# Modern Google Gemini Live SDK
+google-genai>=2.3.0
 
-# TTS (Cartesia/ElevenLabs/EdgeTTS)
-cartesia>=0.1.0
+# TTS & Speech (EdgeTTS fallback)
 edge-tts>=6.1.0
 
-# LLM
-google-generativeai>=0.4.0
-openai>=1.0.0
-
-# Utilities
-keyboard>=0.13.5
+# UI & Windows Automation Utilities
+rich>=13.7.0
 colorama>=0.4.6
-pywin32>=305
+keyboard>=0.13.5
+pyautogui>=0.9.54
+pywin32>=306
+psutil>=5.9.8

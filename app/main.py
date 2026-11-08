@@ -85,7 +85,7 @@ CHANNELS = 1
 SEND_RATE = 16000
 RECV_RATE = 24000
 CHUNK = 1024
-MODEL = "gemini-2.5-flash-native-audio-preview-12-2025"
+MODEL = os.getenv("GEMINI_LIVE_MODEL", "gemini-2.0-flash-exp")
 
 # CRITICAL: Track state
 LAST_OPENED_APP = {"name": None, "window_title": None, "hwnd": None, "timestamp": None}
@@ -674,7 +674,7 @@ async def main():
         system_instruction=PROMPT,
         speech_config=types.SpeechConfig(
             voice_config=types.VoiceConfig(
-                prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name="Charon")
+                prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name=os.getenv("JARVIS_VOICE", "Charon"))
             )
         )
     )
